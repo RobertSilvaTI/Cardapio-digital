@@ -21,6 +21,8 @@ function Home(){
             <ProdutoVitrine/>
             <ProdutoVitrine/>
             <ProdutoVitrine/>
+            <ProdutoVitrine/>
+            <ProdutoVitrine/>
         </div>
     </>
 }
