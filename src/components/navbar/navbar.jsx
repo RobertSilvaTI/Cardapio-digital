@@ -13,7 +13,9 @@ function Navbar(props){
     }
 
     return <div className="navbar">
-        <img src={logo} className="logotipo" alt="Logotipo"/>
+        <Link to='/'>
+            <img src={logo} className="logotipo" alt="Logotipo"/>
+        </Link>
 
         {
             props.showMenu ?

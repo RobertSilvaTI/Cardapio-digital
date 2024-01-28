@@ -1,7 +1,7 @@
 .lista-produtos{
     height: calc(100% - 250px);
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     overflow: auto;
 }
 
@@ -14,7 +14,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    margin-left: 1px;    
+    margin-left: 10px;    
     margin-right: 18px;
     margin-bottom: 23px;
 }

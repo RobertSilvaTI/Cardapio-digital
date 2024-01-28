@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Dock } from "react-dock";
 import ProdutoCart from "../produto-cart/produto-cart.jsx";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
-import { carrinho } from "../../dados.js";
+import { CartContext } from "../../contexts/cart-context.jsx";
 
 function Cart(){
 
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
-    //const [cartItems, setCartItems] = useState([]);
+    const {cartItems, totalCart} = useContext(CartContext);
 
     useEffect(function(){
         window.addEventListener('openSidebar', function(){
@@ -50,7 +50,7 @@ function Cart(){
         <div className="footer-cart"> 
             <div className="footer-cart-valor">
                 <span><strong>Total</strong></span>
-                <span><strong>R$ 50,00</strong></span>
+                <span><strong>{new Intl.NumberFormat('pt-BR', {style: 'currency', currency: "BRL"}).format(totalCart)}</strong></span>
             </div>
             <div>
                 <button onClick={ckeckout} className="btn-checkout">Finalizar Pedido</button>
